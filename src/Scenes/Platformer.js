@@ -87,7 +87,7 @@ class Platformer extends Phaser.Scene {
         // 2048x2048 frame; opaque character lives at approx x[446..635], y[604..978]
         // offset/size in unscaled texture pixels so body bottom aligns with feet
         this.player.body.setSize(300, 400, false);
-        this.player.body.setOffset(870, 1400);
+        this.player.body.setOffset(870, 1390);
         this.player.body.setMaxVelocityX(this.MAX_SPEED * this.SPEED_CAP);
 
         this.groundLayers.forEach(l   => this.physics.add.collider(this.player, l, this.onLand, null, this));
@@ -337,7 +337,7 @@ class Platformer extends Phaser.Scene {
             quantity: 8,
             speed: { min: 15, max: 50 },
             angle: { min: 60, max: 120 },
-            scale: { start: 0.08, end: 0 },
+            scale: { start: 0.06, end: 0 },
             alpha: { start: 0.55, end: 0 },
             lifespan: 220,
             blendMode: Phaser.BlendModes.ADD,
@@ -349,7 +349,7 @@ class Platformer extends Phaser.Scene {
             frame: ['smoke_01.png', 'smoke_02.png'],
             frequency: -1,
             speed: { min: 20, max: 80 },
-            scale: { start: 0.15, end: 0 },
+            scale: { start: 0.13, end: 0 },
             alpha: { start: 0.5, end: 0 },
             lifespan: 280,
             angle: { min: 170, max: 370 },
@@ -463,7 +463,7 @@ class Platformer extends Phaser.Scene {
                 this.superJumpEmitter.explode(6, this.player.x, this.player.y + 15);
                 // Dense tiny trail follows player for the full upward journey (~580 ms)
                 this._superJumpTrailing = true;
-                this.superJumpTrailEmitter.setPosition(this.player.x, this.player.y + 10);
+                this.superJumpTrailEmitter.setPosition(this.player.x, this.player.y + 100);
                 this.superJumpTrailEmitter.start();
                 this.time.delayedCall(580, () => {
                     this._superJumpTrailing = false;
@@ -646,7 +646,7 @@ class Platformer extends Phaser.Scene {
         this._updateUIPos();
 
         if (this._superJumpTrailing) {
-            this.superJumpTrailEmitter.setPosition(this.player.x, this.player.y + 25);
+            this.superJumpTrailEmitter.setPosition(this.player.x, this.player.y + 38);
         }
 
         if (this._restoreCameraLerp) {
