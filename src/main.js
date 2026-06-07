@@ -20,6 +20,7 @@ let config = {
         width: 1200,
         height: 800,
     },
+    //added virtuals to see hitboxes for debugging, can be toggled with V key
     physics: {
         default: 'arcade',
         arcade: {
