@@ -1,3 +1,4 @@
+// Ghost enemy class
 class Ghost {
     constructor(scene, x, y, spawnX) {
         this.scene  = scene;
