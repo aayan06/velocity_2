@@ -1,3 +1,4 @@
+// Main gameplay scene for Velocity. Player runs automatically to the right;
 class Platformer extends Phaser.Scene {
     constructor() {
         super("platformerScene");
