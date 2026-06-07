@@ -28,17 +28,7 @@ class Title extends Phaser.Scene {
             fontStyle: 'bold'
         }).setOrigin(0.5);
 
-        this.add.text(cx, 350, '→   Accelerate', {
-            fontSize: '18px',
-            fill: '#aaaaaa',
-            fontFamily: 'Arial'
-        }).setOrigin(0.5);
-
-        this.add.text(cx, 378, 'A   Brake', {
-            fontSize: '18px',
-            fill: '#aaaaaa',
-            fontFamily: 'Arial'
-        }).setOrigin(0.5);
+        
 
         this.add.text(cx, 406, 'D   Dash  (5s cooldown)', {
             fontSize: '18px',
@@ -59,9 +49,21 @@ class Title extends Phaser.Scene {
             fontStyle: 'bold'
         }).setOrigin(0.5);
 
-        this.add.text(cx, 570, 'by Aayan Abdullah', {
+        this.add.text(cx, 580, 'by Aayan Abdullah', {
             fontSize: '14px',
-            fill: '#444444',
+            fill: '#e60101',
+            fontFamily: 'Arial'
+        }).setOrigin(0.5);
+
+        this.add.text(cx, 600, 'Assets: Kenney.nl | OpenGameArt.org | FabinhoSC', {
+            fontSize: '12px',
+            fill: '#d6ba19',
+            fontFamily: 'Arial'
+        }).setOrigin(0.5);
+
+        this.add.text(cx, 618, 'Music & Audio: Kenney Impact Sounds', {
+            fontSize: '12px',
+            fill: '#bce615',
             fontFamily: 'Arial'
         }).setOrigin(0.5);
 
